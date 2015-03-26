@@ -1,0 +1,9 @@
+#N canvas -8 -8 1366 689 10;
+#X obj 6 2 cnv 15 500 500 empty empty Maze 20 8 1 14 -4032 -66577 0
+;
+#X obj 511 2 cnv 15 100 500 empty empty Control 20 8 1 14 -257985 -66577
+0;
+#X obj 925 2 cnv 15 300 500 empty empty Communication_Logic 20 8 1
+14 -4034 -66577 0;
+#X obj 618 2 cnv 15 300 500 empty empty Play_Logic 20 8 1 14 -260097
+-66577 0;
