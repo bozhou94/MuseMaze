@@ -3,22 +3,22 @@
 0;
 #X obj 274 2 cnv 15 100 540 empty empty Control 20 8 1 14 -257985 -66577
 0;
-#X obj 1295 2 cnv 15 400 540 empty empty Communication_Logic 20 8 1
+#X obj 1290 4 cnv 15 400 540 empty empty Communication_Logic 20 8 1
 14 -4034 -66577 0;
 #X floatatom 281 41 8 0 0 0 - - -;
 #X obj 281 57 s bpm;
-#N canvas 758 220 450 300 bpmtobeat 0;
+#N canvas 249 161 450 285 bpmtobeat 0;
 #X obj 70 9 pow -1;
 #X obj 70 -15 r bpm;
 #X obj 70 26 * 60000;
-#X floatatom 70 43 5 0 0 0 - - -;
+#X floatatom 70 44 5 0 0 0 - - -;
 #X text 121 25 Convert bpm to ms;
 #X obj 13 76 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 13 26 loadbang;
 #X text 83 60 Bang at appropriate bpm;
 #X obj 13 91 s beat;
-#X obj 13 59 metro 300;
+#X obj 13 59 metro 1000;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -29,22 +29,22 @@
 #X restore 281 81 pd bpmtobeat;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array client1_x 100 float 3;
-#A 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#A 0 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0;
 #X coords 0 9 99 0 100 40 1 0 0;
-#X restore -110 579 graph;
-#X obj -131 546 cnv 15 1220 135 empty empty Client_Signals 20 8 1 14
+#X restore -3 567 graph;
+#X obj -130 549 cnv 15 1220 135 empty empty Client_Signals 20 8 1 14
 -261234 -66577 0;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array client1_y 100 float 3;
-#A 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#A 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0;
 #X coords 0 9 99 0 100 40 1 0 0;
-#X restore -110 638 graph;
+#X restore -3 626 graph;
 #X text 284 21 Monitor BPM;
 #X obj -112 40 bng 40 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -307,30 +307,27 @@
 #X text 1634 262 RIGHT;
 #X text 1372 225 LEFT;
 #X text 1529 371 DOWN;
-#X obj 1447 224 bng 100 250 50 0 empty empty empty 17 7 0 10 -260097
+#X obj 1449 224 bng 100 250 50 0 empty empty empty 17 7 0 10 -260097
 -1 -1;
 #X msg 1446 324 5;
 #X text 1487 132 UP;
 #X text 1551 216 PLAY PATH;
-#X obj 386 2 cnv 15 900 540 empty empty Play_Logic 20 8 1 14 -260097
+#X obj 382 3 cnv 15 900 540 empty empty Play_Logic 20 8 1 14 -260097
 -66577 0;
 #X obj 890 37 r player_in;
 #X obj 889 71 sel 1 2 3 4 5;
-#X obj 410 305 r beat;
+#X obj 409 304 r beat;
 #X obj 410 328 f;
 #X obj 444 328 + 1;
 #X text 477 328 Increment index on beat;
 #X floatatom 410 382 5 0 0 0 - - -;
 #X obj 410 365 % 10;
 #X floatatom 444 350 5 0 0 0 - - -;
-#X obj 410 425 tabread client1_x;
 #X floatatom 410 448 5 0 0 0 - - -;
-#X obj 410 476 s c1x;
+#X obj 410 485 s c1x;
 #X text 463 366 Contrain to array bounds;
-#X obj 529 425 tabread client1_y;
 #X floatatom 529 448 5 0 0 0 - - -;
-#X obj 529 476 s c1y;
-#X obj 484 349 r c1len;
+#X obj 529 482 s c1y;
 #N canvas 99 67 1362 689 server 0;
 #X obj 671 873 loadbang;
 #N canvas 908 0 450 300 filter 0;
@@ -4781,7 +4778,7 @@ Bangs are then sent out to be viewed on master;
 #X restore 410 511 pd server;
 #X text 408 282 Play the sound on beats;
 #X obj 705 424 tabwrite client1_x;
-#X obj 1164 427 tabwrite client1_y;
+#X obj 1125 448 tabwrite client1_y;
 #X obj 686 108 r cur_x;
 #X floatatom 686 128 5 0 0 0 - - -;
 #X obj 665 56 s cur_x;
@@ -4802,23 +4799,43 @@ Bangs are then sent out to be viewed on master;
 #X msg 1227 197 1;
 #X obj 416 157 tabread client1_x;
 #X floatatom 416 180 5 0 0 0 - - -;
-#X obj 416 208 s c1x;
+#X obj 416 227 s c1x;
 #X obj 535 157 tabread client1_y;
 #X floatatom 535 180 5 0 0 0 - - -;
-#X obj 535 208 s c1y;
+#X obj 535 226 s c1y;
 #X obj 418 74 r c1len;
 #X obj 686 146 pipe 50;
 #X obj 1175 142 pipe 50;
 #X obj 419 110 pipe 50;
-#X obj 856 391 pipe 50;
-#X floatatom 873 347 5 0 0 0 - - -;
+#X floatatom 765 359 5 0 0 0 - - -;
 #X obj 876 447 s c1len;
-#X obj 881 259 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 790 213 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 881 301 counter 0 0 100;
-#X obj 946 259 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 770 325 counter 0 0 100;
+#X obj 1118 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 1005 225 \; client1_x const 0 \; client1_y const 0 \;;
+#X msg 1001 372 \; client1_x const 0 \; client1_y const 0 \;;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array play1_x 100 float 2;
+#X coords 0 9 100 0 100 40 1 0 0;
+#X restore 113 570 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array play1_y 100 float 2;
+#X coords 0 9 100 0 100 40 1 0 0;
+#X restore 116 628 graph;
+#X obj 859 200 arraycopy play1_x;
+#X msg 859 175 copy client1_x;
+#X obj 1025 145 t b b b;
+#X obj 860 260 arraycopy play1_y;
+#X msg 860 235 copy client1_y;
+#X obj 988 207 r c1len;
+#X obj 973 230 f;
+#X obj 973 261 s p1len;
+#X obj 529 425 tabread play1_y;
+#X obj 410 425 tabread play1_x;
+#X obj 484 349 r p1len;
+#X obj 856 391 pipe 80;
+#X obj 1117 240 pipe 80;
 #X connect 3 0 4 0;
 #X connect 55 0 54 0;
 #X connect 57 0 56 0;
@@ -4912,58 +4929,69 @@ Bangs are then sent out to be viewed on master;
 #X connect 185 0 186 0;
 #X connect 186 0 176 0;
 #X connect 190 0 191 0;
-#X connect 191 0 227 0;
-#X connect 191 0 242 0;
-#X connect 191 1 216 0;
-#X connect 191 1 242 0;
-#X connect 191 2 228 0;
-#X connect 191 2 242 0;
-#X connect 191 3 217 0;
-#X connect 191 3 242 0;
-#X connect 191 4 244 0;
-#X connect 191 4 245 0;
+#X connect 191 0 224 0;
+#X connect 191 0 238 0;
+#X connect 191 1 213 0;
+#X connect 191 1 238 0;
+#X connect 191 2 225 0;
+#X connect 191 2 238 0;
+#X connect 191 3 214 0;
+#X connect 191 3 238 0;
+#X connect 191 4 246 0;
 #X connect 192 0 193 0;
 #X connect 193 0 194 0;
 #X connect 193 0 197 0;
 #X connect 194 0 193 1;
-#X connect 196 0 199 0;
-#X connect 196 0 203 0;
+#X connect 196 0 252 0;
+#X connect 196 0 253 0;
 #X connect 197 0 196 0;
 #X connect 198 0 197 1;
 #X connect 199 0 200 0;
-#X connect 203 0 204 0;
-#X connect 206 0 198 0;
+#X connect 202 0 203 0;
+#X connect 208 0 209 0;
+#X connect 209 0 233 0;
 #X connect 211 0 212 0;
-#X connect 212 0 236 0;
-#X connect 214 0 215 0;
-#X connect 214 0 218 0;
-#X connect 214 0 209 0;
-#X connect 215 0 214 1;
-#X connect 216 0 214 1;
-#X connect 217 0 214 1;
-#X connect 219 0 213 0;
-#X connect 220 0 237 0;
-#X connect 221 0 222 0;
-#X connect 221 0 224 0;
-#X connect 221 0 210 0;
-#X connect 222 0 221 1;
-#X connect 223 0 220 0;
-#X connect 225 0 226 0;
-#X connect 227 0 221 1;
-#X connect 228 0 221 1;
+#X connect 211 0 215 0;
+#X connect 211 0 206 0;
+#X connect 212 0 211 1;
+#X connect 213 0 211 1;
+#X connect 214 0 211 1;
+#X connect 216 0 210 0;
+#X connect 217 0 234 0;
+#X connect 218 0 219 0;
+#X connect 218 0 221 0;
+#X connect 218 0 207 0;
+#X connect 219 0 218 1;
+#X connect 220 0 217 0;
+#X connect 222 0 223 0;
+#X connect 224 0 218 1;
+#X connect 225 0 218 1;
+#X connect 226 0 227 0;
+#X connect 227 0 228 0;
 #X connect 229 0 230 0;
 #X connect 230 0 231 0;
-#X connect 232 0 233 0;
-#X connect 233 0 234 0;
-#X connect 235 0 238 0;
-#X connect 236 0 214 0;
-#X connect 237 0 221 0;
-#X connect 238 0 229 0;
-#X connect 238 0 232 0;
-#X connect 239 0 209 1;
-#X connect 239 0 210 1;
-#X connect 239 0 241 0;
-#X connect 240 0 239 0;
-#X connect 242 0 243 0;
-#X connect 243 0 240 0;
-#X connect 244 0 243 3;
+#X connect 232 0 235 0;
+#X connect 233 0 211 0;
+#X connect 234 0 218 0;
+#X connect 235 0 226 0;
+#X connect 235 0 229 0;
+#X connect 236 0 255 0;
+#X connect 238 0 239 0;
+#X connect 239 0 236 0;
+#X connect 240 0 239 3;
+#X connect 240 0 241 0;
+#X connect 245 0 244 0;
+#X connect 246 0 245 0;
+#X connect 246 0 248 0;
+#X connect 246 0 250 0;
+#X connect 246 2 256 0;
+#X connect 248 0 247 0;
+#X connect 249 0 250 1;
+#X connect 250 0 251 0;
+#X connect 252 0 202 0;
+#X connect 253 0 199 0;
+#X connect 254 0 198 0;
+#X connect 255 0 206 1;
+#X connect 255 0 207 1;
+#X connect 255 0 237 0;
+#X connect 256 0 240 0;
