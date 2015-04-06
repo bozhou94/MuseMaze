@@ -1,4 +1,4 @@
-#N canvas 0 0 1362 689 10;
+#N canvas 257 26 1362 689 10;
 #X obj -129 3 cnv 15 900 540 empty empty Play_Logic 20 8 1 14 -260097
 -66577 0;
 #X obj 378 85 sel 1 2 3 4 5;
@@ -24,13 +24,13 @@
 #X msg 190 168 0;
 #X msg 227 161 1;
 #X msg 227 190 -1;
-#X obj 205 220 s cur_x;
+#X obj 193 391 s cur_x;
 #X obj 175 50 init 5;
 #X floatatom 620 117 5 0 0 0 - - -;
 #X obj 620 196 +;
 #X msg 635 160 0;
 #X obj 620 98 r cur_y;
-#X obj 652 218 s cur_y;
+#X obj 653 392 s cur_y;
 #X obj 621 40 init 5;
 #X obj 621 72 s cur_y;
 #X msg 672 161 -1;
@@ -70,7 +70,7 @@
 #X obj 379 279 loadbang;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array client1_x 100 float 3;
-#A 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0
+#A 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0;
@@ -80,7 +80,7 @@
 -261234 -66577 0;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array client1_y 100 float 3;
-#A 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0
+#A 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0;
@@ -94,6 +94,10 @@
 #X array play1_y 100 float 2;
 #X coords 0 9 100 0 100 40 1 0 0;
 #X restore 286 636 graph;
+#X obj 175 240 vsl 15 128 1 9 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 628 247 vsl 15 128 1 9 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
 #X connect 1 0 33 0;
 #X connect 1 0 45 0;
 #X connect 1 1 22 0;
@@ -115,16 +119,14 @@
 #X connect 17 0 18 0;
 #X connect 18 0 40 0;
 #X connect 20 0 21 0;
-#X connect 20 0 24 0;
-#X connect 20 0 15 0;
+#X connect 20 0 71 0;
 #X connect 21 0 20 1;
 #X connect 22 0 20 1;
 #X connect 23 0 20 1;
 #X connect 25 0 19 0;
 #X connect 26 0 41 0;
 #X connect 27 0 28 0;
-#X connect 27 0 30 0;
-#X connect 27 0 16 0;
+#X connect 27 0 72 0;
 #X connect 28 0 27 1;
 #X connect 29 0 26 0;
 #X connect 31 0 32 0;
@@ -161,3 +163,7 @@
 #X connect 62 1 57 0;
 #X connect 64 0 1 0;
 #X connect 65 0 48 0;
+#X connect 71 0 24 0;
+#X connect 71 0 15 0;
+#X connect 72 0 30 0;
+#X connect 72 0 16 0;
