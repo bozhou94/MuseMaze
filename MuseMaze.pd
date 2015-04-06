@@ -270,14 +270,16 @@
 #X obj 201 442 r g9_9;
 #X obj 41 214 r g5_5;
 #X obj 277 88 vsl 15 128 0 1 0 0 vol empty Volume 0 -9 1 10 -262144
--1 -1 7700 1;
+-1 -1 0 1;
 #X obj 371 -35 cnv 15 100 540 empty empty Sessions 20 8 1 14 -204786
 -66577 0;
 #X obj 392 9 session1;
 #X obj 395 -14 comm_in;
-#X obj 393 49 session4;
-#X obj 393 72 session5;
-#X obj 398 97 server;
+#X obj 392 79 session4;
+#X obj 392 102 session5;
+#X obj 396 125 server;
+#X obj 392 32 session2;
+#X obj 392 56 session3;
 #X connect 2 0 3 0;
 #X connect 51 0 50 0;
 #X connect 53 0 52 0;
