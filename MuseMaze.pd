@@ -1,4 +1,4 @@
-#N canvas 0 0 1362 689 10;
+#N canvas 0 0 1354 689 10;
 #X obj -138 -34 cnv 15 400 540 empty empty Maze 20 8 1 14 -4032 -66577
 0;
 #X obj 267 -35 cnv 15 100 540 empty empty Control 20 8 1 14 -257985
@@ -270,11 +270,13 @@
 #X obj 201 442 r g9_9;
 #X obj 41 214 r g5_5;
 #X obj 277 88 vsl 15 128 0 1 0 0 vol empty Volume 0 -9 1 10 -262144
--1 -1 0 1;
+-1 -1 7700 1;
 #X obj 371 -35 cnv 15 100 540 empty empty Sessions 20 8 1 14 -204786
 -66577 0;
 #X obj 392 9 session1;
 #X obj 395 -14 comm_in;
+#X obj 393 49 session4;
+#X obj 393 72 session5;
 #X connect 2 0 3 0;
 #X connect 51 0 50 0;
 #X connect 53 0 52 0;
