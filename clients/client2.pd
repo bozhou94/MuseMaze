@@ -1,47 +1,46 @@
 #N canvas 0 0 1354 687 10;
-#X obj 57 -481 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X msg 55 -432 1;
-#X msg 132 -376 2;
-#X msg 58 -317 3;
-#X msg -18 -376 4;
-#X msg 70 -331 5;
 #X obj 290 -349 sendOSC;
 #X msg 303 -409 disconnect;
 #X floatatom 290 -332 5 0 0 0 - - -;
 #X msg 290 -436 connect 10.144.130.206 5555;
-#X obj -18 -376 s p_in;
-#X obj 70 -314 s p_in;
-#X obj 132 -376 s p_in;
-#X obj 55 -415 s p_in;
 #X obj 350 -383 r p_in;
-#X obj 58 -300 s p_in;
-#X obj 58 -332 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 69 -316 DOWN;
-#X text 75 -464 UP;
-#X obj 132 -409 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 141 -392 RIGHT;
-#X obj 32 -432 bng 100 250 50 0 empty empty empty 17 7 0 10 -260097
--1 -1;
-#X obj -18 -409 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text -7 -392 LEFT;
-#X text 53 -390 PLAY PATH;
 #X msg 350 -366 send /client/2 \$1;
-#X connect 0 0 1 0;
-#X connect 1 0 13 0;
-#X connect 2 0 12 0;
-#X connect 3 0 15 0;
-#X connect 4 0 10 0;
-#X connect 5 0 11 0;
-#X connect 6 0 8 0;
-#X connect 7 0 6 0;
-#X connect 9 0 6 0;
-#X connect 14 0 25 0;
-#X connect 16 0 3 0;
-#X connect 19 0 2 0;
-#X connect 21 0 5 0;
-#X connect 22 0 4 0;
-#X connect 25 0 6 0;
+#X obj 92 -463 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 92 -413 1;
+#X msg 195 -323 2;
+#X msg 94 -218 3;
+#X msg -12 -320 4;
+#X msg 70 -293 5;
+#X obj 18 -320 s p_in;
+#X obj 96 -293 s p_in;
+#X obj 224 -323 s p_in;
+#X obj 122 -413 s p_in;
+#X obj 122 -218 s p_in;
+#X obj 94 -268 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 105 -252 DOWN;
+#X obj 194 -373 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 204 -356 RIGHT;
+#X obj 70 -393 bng 100 250 50 0 empty empty empty 17 7 0 10 -260097
+-1 -1;
+#X obj -12 -370 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text -1 -353 LEFT;
+#X text 91 -352 PLAY PATH;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 15 0;
+#X connect 8 0 14 0;
+#X connect 9 0 16 0;
+#X connect 10 0 12 0;
+#X connect 11 0 13 0;
+#X connect 17 0 9 0;
+#X connect 19 0 8 0;
+#X connect 21 0 11 0;
+#X connect 22 0 10 0;
