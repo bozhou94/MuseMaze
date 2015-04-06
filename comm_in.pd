@@ -1,0 +1,9 @@
+#N canvas 494 137 450 300 10;
+#X obj 10 27 dumpOSC 5555;
+#X text 8 7 Read in signals from the server side;
+#X obj 10 52 OSCroute /client;
+#X obj 10 77 OSCroute /1;
+#X obj 10 104 s p1in;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
