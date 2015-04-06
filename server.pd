@@ -1,4 +1,4 @@
-#N canvas -8 -8 1366 689 10;
+#N canvas 0 0 1354 689 10;
 #X obj 681 883 loadbang;
 #X obj 512 883 loadbang;
 #X obj 512 981 readsf~;
