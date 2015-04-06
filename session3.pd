@@ -10,66 +10,66 @@
 #X obj -103 239 % 10;
 #X floatatom -69 224 5 0 0 0 - - -;
 #X floatatom -103 322 5 0 0 0 - - -;
-#X obj -103 359 s c1x;
+#X obj -103 359 s c3x;
 #X text -50 240 Contrain to array bounds;
 #X floatatom 16 322 5 0 0 0 - - -;
-#X obj 16 356 s c1y;
+#X obj 16 356 s c3x;
 #X text -104 156 Play the sound on beats;
-#X obj 175 420 tabwrite client1_x;
-#X obj 620 420 tabwrite client1_y;
-#X obj 175 108 r cur_x;
+#X obj 175 420 tabwrite client3_x;
+#X obj 620 420 tabwrite client3_y;
+#X obj 175 108 r cur3_x;
 #X floatatom 175 128 5 0 0 0 - - -;
-#X obj 175 82 s cur_x;
+#X obj 175 82 s cur3_x;
 #X obj 175 196 +;
 #X msg 190 168 0;
 #X msg 227 161 1;
 #X msg 227 190 -1;
-#X obj 205 220 s cur_x;
+#X obj 205 220 s cur3_x;
 #X obj 175 50 init 5;
 #X floatatom 620 117 5 0 0 0 - - -;
 #X obj 620 196 +;
 #X msg 635 160 0;
-#X obj 620 98 r cur_y;
-#X obj 652 218 s cur_y;
+#X obj 620 98 r cur3_x;
+#X obj 652 218 s cur3_x;
 #X obj 621 40 init 5;
-#X obj 621 72 s cur_y;
+#X obj 621 72 s cur3_x;
 #X msg 672 161 -1;
 #X msg 672 190 1;
-#X obj -101 109 tabread client1_x;
+#X obj -101 109 tabread client3_x;
 #X floatatom -101 132 5 0 0 0 - - -;
-#X obj 18 109 tabread client1_y;
+#X obj 18 109 tabread client3_y;
 #X floatatom 18 132 5 0 0 0 - - -;
-#X obj -101 45 r c1len;
+#X obj -101 45 r c3len;
 #X obj 175 146 pipe 50;
 #X obj 620 135 pipe 50;
 #X obj -101 68 pipe 50;
 #X floatatom 280 334 5 0 0 0 - - -;
-#X obj 297 420 s c1len;
+#X obj 297 420 s c3len;
 #X obj 280 195 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 280 307 counter 0 0 100;
 #X obj 345 263 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 379 306 \; client1_x const 0 \; client1_y const 0 \;;
-#X obj 434 219 arraycopy play1_x;
-#X msg 434 194 copy client1_x;
+#X msg 379 306 \; client3_x const 0 \; client3_y const 0 \;;
+#X obj 434 219 arraycopy play3_x;
+#X msg 434 194 copy client3_x;
 #X obj 467 151 t b b b;
-#X obj 434 271 arraycopy play1_y;
-#X msg 434 246 copy client1_y;
-#X obj 562 221 r c1len;
+#X obj 434 271 arraycopy play3_y;
+#X msg 434 246 copy client3_y;
+#X obj 562 221 r c3len;
 #X obj 547 246 f;
-#X obj 547 272 s p1len;
-#X obj 16 299 tabread play1_y;
-#X obj -103 299 tabread play1_x;
-#X obj -29 223 r p1len;
+#X obj 547 272 s p3len;
+#X obj 16 299 tabread play3_y;
+#X obj -103 299 tabread play3_x;
+#X obj -29 223 r p3len;
 #X obj 280 375 pipe 80;
 #X obj 345 242 pipe 80;
 #X obj -102 277 t f f;
 #X obj -103 385 server;
-#X obj 378 51 r p1in;
+#X obj 378 51 r p3in;
 #X obj 379 279 loadbang;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array client1_x 100 float 3;
+#X array client3_x 100 float 3;
 #A 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -79,7 +79,7 @@
 #X obj -129 548 cnv 15 900 135 empty empty Client_Signals 20 8 1 14
 -261234 -66577 0;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array client1_y 100 float 3;
+#X array client3_y 100 float 3;
 #A 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -87,11 +87,11 @@
 #X coords 0 9 99 0 100 40 1 0 0;
 #X restore 167 634 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array play1_x 100 float 2;
+#X array play3_x 100 float 2;
 #X coords 0 9 100 0 100 40 1 0 0;
 #X restore 283 578 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array play1_y 100 float 2;
+#X array play3_y 100 float 2;
 #X coords 0 9 100 0 100 40 1 0 0;
 #X restore 286 636 graph;
 #X connect 1 0 33 0;
