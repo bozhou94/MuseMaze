@@ -28,21 +28,13 @@
 #X connect 9 0 5 0;
 #X restore 281 81 pd bpmtobeat;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array client1_x 100 float 3;
-#A 0 5 5 5 6 7 8 8 8 8 8 8 8 7 6 5 4 3 2 2 2 2 3 4 5 5 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0;
+#X array client1_x 100 float 2;
 #X coords 0 9 99 0 100 40 1 0 0;
 #X restore -3 567 graph;
 #X obj -130 549 cnv 15 1220 135 empty empty Client_Signals 20 8 1 14
 -261234 -66577 0;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array client1_y 100 float 3;
-#A 0 5 3 2 2 2 2 3 4 5 6 7 8 8 8 8 8 8 8 7 6 5 5 5 5 5 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0;
+#X array client1_y 100 float 2;
 #X coords 0 9 99 0 100 40 1 0 0;
 #X restore -3 626 graph;
 #X text 284 21 Monitor BPM;
@@ -390,6 +382,8 @@
 #X obj 1117 240 pipe 80;
 #X obj 411 403 t f f;
 #X obj 410 511 server;
+#X obj 668 244 vsl 15 128 1 9 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6350 1;
 #X connect 3 0 4 0;
 #X connect 55 0 54 0;
 #X connect 57 0 56 0;
@@ -505,7 +499,7 @@
 #X connect 208 0 232 0;
 #X connect 210 0 211 0;
 #X connect 210 0 214 0;
-#X connect 210 0 205 0;
+#X connect 210 0 258 0;
 #X connect 211 0 210 1;
 #X connect 212 0 210 1;
 #X connect 213 0 210 1;
@@ -548,3 +542,4 @@
 #X connect 255 0 239 0;
 #X connect 256 0 252 0;
 #X connect 256 1 251 0;
+#X connect 258 0 205 0;
