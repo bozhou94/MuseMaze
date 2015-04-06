@@ -25,21 +25,13 @@
 #X obj -29 223 r p1len;
 #X obj -102 277 t f f;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array client1_x 100 float 3;
-#A 0 5 5 5 5.99968 6 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0;
+#X array client1_x 100 float 2;
 #X coords 0 9 99 0 100 40 1 0 0;
 #X restore 167 575 graph;
 #X obj -129 548 cnv 15 900 135 empty empty Client_Signals 20 8 1 14
 -261234 -66577 0;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array client1_y 100 float 3;
-#A 0 5 3 2 2 2 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0;
+#X array client1_y 100 float 2;
 #X coords 0 9 99 0 100 40 1 0 0;
 #X restore 167 634 graph;
 #N canvas 0 0 450 300 (subpatch) 0;
