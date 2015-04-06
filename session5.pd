@@ -93,10 +93,8 @@
 #X obj 18 109 tabread client5_y;
 #X obj -100 109 tabread client5_x;
 #X obj -101 45 r c5len;
-#X obj 174 237 vsl 15 128 1 9 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 625 228 vsl 15 128 1 9 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+#X obj 175 271 greaterLess;
+#X obj 620 294 greaterLess;
 #X connect 1 0 23 0;
 #X connect 1 0 31 0;
 #X connect 1 1 16 0;
