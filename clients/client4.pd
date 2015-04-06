@@ -1,43 +1,47 @@
-#N canvas 0 0 1914 980 10;
-#X obj 635 337 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+#N canvas 0 0 1354 687 10;
+#X obj 57 -481 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 741 233 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 55 -432 1;
+#X msg 132 -376 2;
+#X msg 58 -317 3;
+#X msg -18 -376 4;
+#X msg 70 -331 5;
+#X obj 290 -349 sendOSC;
+#X msg 303 -409 disconnect;
+#X floatatom 290 -332 5 0 0 0 - - -;
+#X msg 290 -436 connect 10.144.130.206 5555;
+#X obj -18 -376 s p_in;
+#X obj 70 -314 s p_in;
+#X obj 132 -376 s p_in;
+#X obj 55 -415 s p_in;
+#X obj 350 -383 r p_in;
+#X obj 58 -300 s p_in;
+#X obj 58 -332 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 526 237 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+#X text 69 -316 DOWN;
+#X text 75 -464 UP;
+#X obj 132 -409 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 630 479 s player_in;
-#X obj 633 137 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+#X text 141 -392 RIGHT;
+#X obj 32 -432 bng 100 250 50 0 empty empty empty 17 7 0 10 -260097
 -1 -1;
-#X msg 633 188 1;
-#X msg 741 287 2;
-#X msg 636 390 3;
-#X msg 525 289 4;
-#X text 797 248 RIGHT;
-#X text 535 211 LEFT;
-#X text 692 357 DOWN;
-#X obj 612 210 bng 100 250 50 0 empty empty empty 17 7 0 10 -260097
+#X obj -18 -409 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 609 310 5;
-#X text 650 118 UP;
-#X text 714 202 PLAY PATH;
-#X obj 167 437 sendOSC;
-#X msg 219 187 disconnect;
-#X floatatom 157 480 5 0 0 0 - - -;
-#X obj 346 176 r player_in;
-#X msg 169 136 connect 10.144.130.206 5555;
-#X msg 276 243 send /client/4 \$1;
-#X connect 0 0 7 0;
-#X connect 1 0 6 0;
-#X connect 2 0 8 0;
-#X connect 4 0 5 0;
-#X connect 5 0 3 0;
-#X connect 6 0 3 0;
-#X connect 7 0 3 0;
-#X connect 8 0 3 0;
-#X connect 12 0 13 0;
-#X connect 13 0 3 0;
-#X connect 16 0 18 0;
-#X connect 17 0 16 0;
-#X connect 19 0 21 0;
-#X connect 20 0 16 0;
-#X connect 21 0 16 0;
+#X text -7 -392 LEFT;
+#X text 53 -390 PLAY PATH;
+#X msg 350 -366 send /client/4 \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 13 0;
+#X connect 2 0 12 0;
+#X connect 3 0 15 0;
+#X connect 4 0 10 0;
+#X connect 5 0 11 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 9 0 6 0;
+#X connect 14 0 25 0;
+#X connect 16 0 3 0;
+#X connect 19 0 2 0;
+#X connect 21 0 5 0;
+#X connect 22 0 4 0;
+#X connect 25 0 6 0;
