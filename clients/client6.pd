@@ -1,0 +1,47 @@
+#N canvas 0 0 1354 687 10;
+#X obj 91 -464 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 91 -414 1;
+#X msg 194 -324 2;
+#X msg 93 -219 3;
+#X msg -13 -321 4;
+#X msg 69 -294 5;
+#X obj 290 -349 sendOSC;
+#X msg 303 -409 disconnect;
+#X floatatom 290 -332 5 0 0 0 - - -;
+#X msg 290 -436 connect 10.144.130.206 5555;
+#X obj 17 -321 s p_in;
+#X obj 95 -294 s p_in;
+#X obj 223 -324 s p_in;
+#X obj 121 -414 s p_in;
+#X obj 350 -383 r p_in;
+#X obj 121 -219 s p_in;
+#X obj 93 -269 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 104 -253 DOWN;
+#X text 107 -447 UP;
+#X obj 193 -374 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 203 -357 RIGHT;
+#X obj 69 -394 bng 100 250 50 0 empty empty empty 17 7 0 10 -260097
+-1 -1;
+#X obj -13 -371 bng 50 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text -2 -354 LEFT;
+#X text 90 -353 PLAY PATH;
+#X msg 350 -366 send /client/6 \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 13 0;
+#X connect 2 0 12 0;
+#X connect 3 0 15 0;
+#X connect 4 0 10 0;
+#X connect 5 0 11 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 9 0 6 0;
+#X connect 14 0 25 0;
+#X connect 16 0 3 0;
+#X connect 19 0 2 0;
+#X connect 21 0 5 0;
+#X connect 22 0 4 0;
+#X connect 25 0 6 0;
