@@ -1,4 +1,4 @@
-#N canvas 0 26 1354 689 10;
+#N canvas 385 78 1354 689 10;
 #X obj -129 3 cnv 15 900 540 empty empty Play_Logic 20 8 1 14 -260097
 -66577 0;
 #X obj -103 178 r beat;
@@ -85,9 +85,11 @@
 #X obj 383 50 r p1in;
 #X obj 180 312 greaterLess;
 #X obj 647 310 greaterLess;
-#X msg 453 382 \; client1_x const 0 \; client1_y const 0 \; play1_x
-const 5 \; play1_y const 5 \;;
 #X obj 472 353 loadbang;
+#X msg 453 382 \; client1_x const 5 \; client1_y const 5 \;;
+#X obj -96 397 loadbang;
+#X msg -96 424 \; client1_x const 5 \; client1_y const 5 \; play1_x
+const 5 \; play1_y const 5 \;;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 0 6 0;
@@ -138,7 +140,7 @@ const 5 \; play1_y const 5 \;;
 #X connect 54 0 55 0;
 #X connect 55 0 52 0;
 #X connect 56 0 55 3;
-#X connect 56 0 70 0;
+#X connect 56 0 71 0;
 #X connect 58 0 57 0;
 #X connect 59 0 66 0;
 #X connect 59 2 63 0;
@@ -156,4 +158,5 @@ const 5 \; play1_y const 5 \;;
 #X connect 68 0 30 0;
 #X connect 69 0 45 0;
 #X connect 69 0 31 0;
-#X connect 71 0 70 0;
+#X connect 70 0 71 0;
+#X connect 72 0 73 0;
