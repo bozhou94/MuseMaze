@@ -86,7 +86,8 @@
 #X obj 551 271 s p10len;
 #X msg 434 246 copy client10_y;
 #X obj 434 271 arraycopy play10_y;
-#X msg 380 306 \; client10_x const 0 \; client10_y const 0 \;;
+#X msg 380 306 \; client10_x const 0 \; client10_y const 0 \; play10_x
+const 5 \; play10_y const 5 \;;
 #X connect 1 0 23 0;
 #X connect 1 0 31 0;
 #X connect 1 1 16 0;

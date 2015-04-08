@@ -86,7 +86,8 @@
 #X obj 297 420 s c15len;
 #X obj 175 420 tabwrite client15_x;
 #X obj 204 395 s cur15_x;
-#X msg 380 306 \; client15_x const 0 \; client15_y const 0 \;;
+#X msg 380 306 \; client15_x const 0 \; client15_y const 0 \; play15_x
+const 5 \; play15_y const 5 \;;
 #X connect 1 0 23 0;
 #X connect 1 0 31 0;
 #X connect 1 1 16 0;

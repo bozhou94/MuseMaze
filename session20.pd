@@ -86,7 +86,8 @@
 #X obj 434 271 arraycopy play20_y;
 #X obj 562 221 r c20len;
 #X obj 551 271 s p20len;
-#X msg 380 306 \; client20_x const 0 \; client20_y const 0 \;;
+#X msg 380 306 \; client20_x const 0 \; client20_y const 0 \; play20_x
+const 5 \; play20_y const 5 \;;
 #X connect 1 0 23 0;
 #X connect 1 0 31 0;
 #X connect 1 1 16 0;

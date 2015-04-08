@@ -86,7 +86,8 @@
 #X obj 434 272 arraycopy play17_y;
 #X obj 551 271 s p17len;
 #X obj 562 221 r c17len;
-#X msg 380 306 \; client17_x const 0 \; client17_y const 0 \;;
+#X msg 380 306 \; client17_x const 0 \; client17_y const 0 \; play17_x
+const 5 \; play17_y const 5 \;;
 #X connect 1 0 23 0;
 #X connect 1 0 31 0;
 #X connect 1 1 16 0;

@@ -1,4 +1,4 @@
-#N canvas 340 74 1362 689 10;
+#N canvas 60 40 1362 689 10;
 #X obj -129 3 cnv 15 900 540 empty empty Play_Logic 20 8 1 14 -260097
 -66577 0;
 #X obj 378 85 sel 1 2 3 4 5;
@@ -86,7 +86,8 @@
 #X obj 434 271 arraycopy play14_y;
 #X obj 551 271 s p14len;
 #X obj 562 221 r c14len;
-#X msg 380 306 \; client14_x const 0 \; client14_y const 0 \;;
+#X msg 380 306 \; client14_x const 0 \; client14_y const 0 \; play14_x
+const 5 \; play14_y const 5 \;;
 #X connect 1 0 23 0;
 #X connect 1 0 31 0;
 #X connect 1 1 16 0;

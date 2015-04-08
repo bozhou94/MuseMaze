@@ -1,4 +1,4 @@
-#N canvas 340 74 1362 689 10;
+#N canvas -8 -8 1366 689 10;
 #X obj -129 3 cnv 15 900 540 empty empty Play_Logic 20 8 1 14 -260097
 -66577 0;
 #X obj 378 85 sel 1 2 3 4 5;
@@ -82,11 +82,12 @@
 #X obj 547 274 s p9len;
 #X obj 647 399 s cur9_y;
 #X obj 620 420 tabwrite client9_y;
-#X msg 379 306 \; client9_x const 0 \; client9_y const 0 \;;
 #X obj 435 271 arraycopy play9_y;
 #X msg 434 246 copy client9_y;
 #X obj 434 219 arraycopy play9_x;
 #X msg 434 194 copy client9_x;
+#X msg 379 306 \; client9_x const 0 \; client9_y const 0 \; play9_x
+const 5 \; play9_y const 5 \;;
 #X connect 1 0 23 0;
 #X connect 1 0 31 0;
 #X connect 1 1 16 0;
@@ -127,11 +128,11 @@
 #X connect 31 0 32 0;
 #X connect 32 0 30 0;
 #X connect 33 0 32 3;
-#X connect 33 0 67 0;
+#X connect 33 0 71 0;
 #X connect 34 0 37 0;
 #X connect 34 2 35 0;
-#X connect 34 2 69 0;
-#X connect 34 2 71 0;
+#X connect 34 2 68 0;
+#X connect 34 2 70 0;
 #X connect 35 0 64 0;
 #X connect 36 0 58 1;
 #X connect 36 0 59 0;
@@ -139,7 +140,7 @@
 #X connect 37 0 33 0;
 #X connect 38 0 51 0;
 #X connect 38 1 52 0;
-#X connect 39 0 67 0;
+#X connect 39 0 71 0;
 #X connect 45 0 57 0;
 #X connect 45 0 58 0;
 #X connect 46 0 65 0;
@@ -154,5 +155,5 @@
 #X connect 60 0 1 0;
 #X connect 62 0 19 0;
 #X connect 63 0 35 1;
-#X connect 69 0 68 0;
-#X connect 71 0 70 0;
+#X connect 68 0 67 0;
+#X connect 70 0 69 0;

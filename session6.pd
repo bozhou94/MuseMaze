@@ -86,7 +86,8 @@
 #X obj 175 420 tabwrite client6_x;
 #X obj 297 420 s c6len;
 #X obj 204 395 s cur6_x;
-#X msg 379 307 \; client6_x const 0 \; client6_y const 0 \;;
+#X msg 379 307 \; client6_x const 0 \; client6_y const 0 \; play6_x
+const 5 \; play6_y const 5 \;;
 #X connect 1 0 23 0;
 #X connect 1 0 31 0;
 #X connect 1 1 16 0;
